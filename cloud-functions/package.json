@@ -1,0 +1,12 @@
+{
+  "name": "ai-shadow-tracker-functions",
+  "version": "1.0.0",
+  "description": "Firebase Cloud Functions for AI Digital Shadow Tracker",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^4.4.1",
+    "firebase-admin": "^11.11.1",
+    "axios": "^1.6.0"
+  },
+  "private": true
+}

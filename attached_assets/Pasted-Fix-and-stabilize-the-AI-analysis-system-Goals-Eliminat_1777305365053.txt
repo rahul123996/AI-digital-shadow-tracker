@@ -1,0 +1,99 @@
+Fix and stabilize the AI analysis system.
+
+Goals:
+
+* Eliminate Gemini API failures (NotFound, parsing issues)
+* Ensure consistent JSON output
+* Make system robust with fallback logic
+* Integrate duplication_factor safely into risk scoring
+
+Tasks:
+
+1. Use Gemini model:
+   model: "gemini-1.5-flash"
+
+2. Replace the existing prompt with a SIMPLE and STRICT JSON prompt:
+
+const prompt = `
+Analyze the following content for potential misuse.
+
+Content: ${content}
+
+Duplication Factor: ${duplication_factor}
+
+Return ONLY valid JSON in this format:
+{
+"risk_score": number (0-100),
+"risk_level": "Low | Medium | High",
+"reason": "short explanation"
+}
+`;
+
+3. Limit input size to prevent overload:
+
+* Trim content to max 500 characters
+* Limit sources_found to top 3 entries
+
+4. Add safe Gemini call with error handling:
+
+try {
+const result = await model.generateContent(prompt);
+const text = result.response.text();
+
+let parsed;
+try {
+parsed = JSON.parse(text);
+} catch (err) {
+console.log("⚠️ JSON parse failed, using fallback");
+parsed = null;
+}
+
+if (!parsed || !parsed.risk_score) {
+throw new Error("Invalid Gemini response");
+}
+
+return parsed;
+
+} catch (error) {
+console.log("❌ Gemini failed, using fallback:", error.message);
+
+// Deterministic fallback logic
+let risk = 30;
+
+if (duplication_factor > 0.7) risk += 40;
+else if (duplication_factor > 0.4) risk += 25;
+
+if (sources_found && sources_found.length > 2) risk += 20;
+
+let level = "Low";
+if (risk > 70) level = "High";
+else if (risk > 40) level = "Medium";
+
+return {
+risk_score: risk,
+risk_level: level,
+reason: "Calculated using fallback logic with duplication analysis"
+};
+}
+
+5. Always ensure system NEVER crashes:
+
+* No unhandled promise rejections
+* Always return valid JSON
+
+6. Log debugging info:
+
+* Log Gemini response text
+* Log fallback usage
+
+7. Do NOT remove existing fields.
+
+* Keep duplication_factor, sources_found, timeline
+* Only improve stability and reliability
+
+Result:
+
+* Stable AI system
+* No Gemini crashes
+* Consistent output
+* Hackathon-ready reliability

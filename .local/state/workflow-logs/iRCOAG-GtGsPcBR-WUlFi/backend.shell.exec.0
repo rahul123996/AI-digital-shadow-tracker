@@ -1,0 +1,25 @@
+✅ Firebase initialised
+
+    🚀 AI Shadow Tracker backend ready at http://localhost:3001
+    🟢 Environment: development
+  
+[firebaseService] scan fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/identity-score?userId=u-rec1 [32m200[0m 570.923 ms - 214[0m
+[0mPOST /api/assistant [32m200[0m 5.903 ms - 155[0m
+[0mPOST /api/assistant [32m200[0m 1.345 ms - 140[0m
+[0mGET /api/status [32m200[0m 0.330 ms - 68[0m
+[0mGET /api/status [36m304[0m 0.535 ms - -[0m
+[firebaseService] scan save fell back to memory: 5 NOT_FOUND: 
+[firebaseService] alert save fell back to memory: 5 NOT_FOUND: 
+[0mPOST /api/scan/text [32m200[0m 405.272 ms - 2455[0m
+[firebaseService] scan save fell back to memory: 5 NOT_FOUND: 
+[firebaseService] alert save fell back to memory: 5 NOT_FOUND: 
+[0mPOST /api/scan/text [32m200[0m 586.266 ms - 2421[0m
+[firebaseService] scan save fell back to memory: 5 NOT_FOUND: 
+[firebaseService] alert save fell back to memory: 5 NOT_FOUND: 
+[0mPOST /api/scan/text [32m200[0m 28.346 ms - 2409[0m
+[firebaseService] scan save fell back to memory: 5 NOT_FOUND: 
+[firebaseService] alert save fell back to memory: 5 NOT_FOUND: 
+[0mPOST /api/scan/text [32m200[0m 15.609 ms - 3293[0m
+[0mGET /api/status [36m304[0m 0.374 ms - -[0m
+[0mGET /api/status [36m304[0m 0.228 ms - -[0m

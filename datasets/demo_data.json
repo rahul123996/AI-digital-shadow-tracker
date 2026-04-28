@@ -1,0 +1,54 @@
+{
+  "test_cases": [
+    {
+      "id": "TC-001",
+      "type": "IMPERSONATION",
+      "source_content": "datasets/images/original_profile.png",
+      "detected_at": "https://secure-crypto-vault-2026.com/team",
+      "found_content": "datasets/images/misused_profile.png",
+      "context": "The profile image is being used under the name 'Dr. Robert Vane' as the Lead Portfolio Manager on a suspicious high-yield investment platform.",
+      "expected_risk": "High Risk",
+      "misuse_type": "Identity Fraud / Investment Scam"
+    },
+    {
+      "id": "TC-002",
+      "type": "DATA_LEAK",
+      "source_content": "User Personal Email: rahul.test@example.com",
+      "detected_at": "https://pastebin.shadow-net.org/leak/db_dump_192",
+      "found_content": "rahul.test@example.com",
+      "context": "Email address found in a plain-text database dump alongside hashed passwords and phone numbers.",
+      "expected_risk": "High Risk",
+      "misuse_type": "Privacy Leak"
+    },
+    {
+      "id": "TC-003",
+      "type": "SUSPICIOUS_USAGE",
+      "source_content": "Professional Resume PDF",
+      "detected_at": "https://random-hr-portal.xyz/unverified-candidates",
+      "found_content": "Resume details for Rahul",
+      "context": "Resume details appear on an unverified job portal that has been flagged for phishing user credentials via fake job offers.",
+      "expected_risk": "Suspicious",
+      "misuse_type": "Potential Phishing"
+    }
+  ],
+  "fake_websites": [
+    {
+      "domain": "secure-crypto-vault-2026.com",
+      "category": "Financial Scam",
+      "risk_score": 98,
+      "description": "A classic 'get rich quick' crypto site that uses stolen professional headshots to build fake trust."
+    },
+    {
+      "domain": "pastebin.shadow-net.org",
+      "category": "Data Repository",
+      "risk_score": 85,
+      "description": "Known for hosting data leaks and sensitive PII from large-scale breaches."
+    },
+    {
+      "domain": "random-hr-portal.xyz",
+      "category": "Phishing",
+      "risk_score": 65,
+      "description": "Aggregates professional data to target individuals with tailored phishing emails."
+    }
+  ]
+}

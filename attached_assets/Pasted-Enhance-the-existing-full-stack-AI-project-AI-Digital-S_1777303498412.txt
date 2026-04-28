@@ -1,0 +1,99 @@
+Enhance the existing full-stack AI project "AI Digital Shadow Tracker" by adding advanced, hackathon-winning features. Keep the current architecture intact (React frontend, Node.js backend, Python AI engine, Firebase), and extend it with the following upgrades:
+
+1. Live Monitoring Feature:
+
+* Add a "Start Live Monitoring" button on the dashboard
+* When enabled:
+
+  * Automatically trigger scan API every 5–10 seconds
+  * Simulate new incoming data using existing uploads or dummy dataset
+* Show real-time updates on dashboard
+* Auto-generate alerts for high-risk detections
+* Add toggle to stop monitoring
+* Display "Monitoring Active" indicator
+
+2. Voice Input Integration:
+
+* Add a microphone button on upload page
+* Use Web Speech API to capture voice input
+* Convert speech to text
+* Send text automatically to scan API
+* Show recognized text before scanning
+* Add loading indicator while listening
+
+3. Advanced Dashboard Analytics:
+
+* Integrate charts (Chart.js or Recharts)
+* Show:
+
+  * Total scans count
+  * Safe / Suspicious / High Risk distribution
+* Add:
+
+  * Pie chart (risk distribution)
+  * Bar chart (recent scans)
+* Use color coding (green, yellow, red)
+
+4. AI Explanation Panel:
+
+* For each scan result, add "Why flagged?" section
+* Show structured bullet points:
+
+  * similarity detected
+  * suspicious keywords
+  * context issues
+* Use Gemini API to generate explanation
+* Add expandable/collapsible UI section
+
+5. Internet Source Simulation:
+
+* Add fields in results:
+
+  * "Source Found On" (generate realistic domain names)
+  * "Confidence Score" (percentage)
+* Display these in dashboard and result view
+* Use random or dataset-based simulation
+
+6. Mobile Responsive UI:
+
+* Make frontend fully responsive
+* Optimize for mobile and tablet
+* Improve button sizes, layout, and readability
+
+7. Performance and UX Enhancements:
+
+* Add loading spinner during scan
+* Add progress bar for scanning process
+* Disable buttons while processing
+* Add smooth transitions and animations
+* Show status messages like "Scanning..." or "Processing..."
+
+8. AI Risk Prediction Before Upload:
+
+* When user selects file or enters text:
+
+  * Run a quick pre-analysis
+  * Show predicted risk score before full scan
+* Display message:
+  "This content has X% chance of misuse"
+* Use lightweight AI logic or Gemini prompt
+
+General Requirements:
+
+* Maintain clean modular code structure
+* Ensure all features are fully functional and connected end-to-end
+* Do not break existing APIs
+* Keep implementation simple but demo-ready
+* Add necessary backend and AI updates to support new features
+* Ensure frontend properly consumes new data fields
+
+Final Output:
+
+* Updated full project code
+* Working frontend with all new features
+* Backend and AI updates integrated
+* Clear instructions to run the project
+* Ensure the app runs smoothly without errors
+
+Goal:
+Transform the project into a highly polished, innovative, hackathon-winning application with strong UI/UX, AI integration, and real-time features.

@@ -1,0 +1,17 @@
+✅ Firebase initialised
+
+    🚀 AI Shadow Tracker backend ready at http://localhost:3001
+    🟢 Environment: development
+  
+[0mGET / [32m200[0m 1.795 ms - 45[0m
+[0mGET /favicon.ico [33m404[0m 1.537 ms - 150[0m
+[identityController] error: firebaseService.getResults is not a function
+[0mGET /api/identity-score?userId=ghost-user [31m500[0m 0.958 ms - 56[0m
+[0mPOST /api/assistant [32m200[0m 10.813 ms - 176[0m
+[firebaseService] scan save fell back to memory: 5 NOT_FOUND: 
+[firebaseService] alert save fell back to memory: 5 NOT_FOUND: 
+[0mPOST /api/scan/text [32m200[0m 975.782 ms - 2443[0m
+[identityController] error: firebaseService.getResults is not a function
+[0mGET /api/identity-score?userId=u-rec1 [31m500[0m 0.453 ms - 56[0m
+SIGTERM received: closing HTTP server
+HTTP server closed

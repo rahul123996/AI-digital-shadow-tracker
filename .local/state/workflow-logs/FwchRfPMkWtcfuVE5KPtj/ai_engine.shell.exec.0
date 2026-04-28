@@ -1,0 +1,13 @@
+[risk_analysis] ℹ️  GEMINI_API_KEY missing — using deterministic fallback
+ * Serving Flask app 'main'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.31.67.2:8000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [28/Apr/2026 13:22:15] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 13:24:05] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 13:24:06] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 13:24:06] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [28/Apr/2026 13:24:07] "POST /analyze HTTP/1.1" 200 -

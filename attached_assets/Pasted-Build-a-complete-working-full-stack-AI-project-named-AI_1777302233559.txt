@@ -1,0 +1,132 @@
+Build a complete working full-stack AI project named "AI Digital Shadow Tracker".
+
+Goal:
+Create a web application that allows users to upload images or text and detect potential misuse using AI. The system should simulate scanning internet data and provide risk analysis.
+
+Tech Stack:
+
+* Frontend: React (simple clean UI)
+* Backend: Node.js with Express
+* Database: Firebase Firestore
+* Storage: Firebase Storage
+* AI Layer: Python (Flask API)
+* AI Integration: Google Gemini API
+
+Project Requirements:
+
+1. Frontend (React):
+
+* Create pages:
+
+  * Login/Register (basic, can be dummy)
+  * Upload Page (upload image or text)
+  * Dashboard Page
+  * Alerts Page
+* Features:
+
+  * Upload file
+  * Show scan results
+  * Show risk level (Safe, Suspicious, High Risk)
+  * Display alerts
+* Use simple CSS (clean and modern UI)
+
+2. Backend (Node.js):
+
+* Create APIs:
+
+  * POST /upload → upload file to Firebase Storage
+  * POST /scan → call AI service
+  * GET /results → return scan results
+  * POST /alert → trigger alert
+* Connect with Firebase Firestore
+* Use proper folder structure (routes, controllers, services)
+
+3. AI Engine (Python Flask):
+
+* Create endpoints:
+
+  * POST /analyze
+* Features:
+
+  * Simulate image similarity detection (use simple logic or dummy dataset)
+  * Integrate Gemini API to analyze context
+* Output JSON:
+  {
+  "similarity_score": number,
+  "risk_level": "Safe | Suspicious | High Risk",
+  "explanation": "text"
+  }
+
+4. Gemini Integration:
+
+* Use Gemini API to:
+
+  * Analyze uploaded content
+  * Detect possible misuse
+  * Generate explanation
+
+5. Database:
+
+* Store:
+
+  * user uploads
+  * scan results
+  * alerts
+
+6. Flow:
+
+* User uploads file
+* Backend sends it to AI engine
+* AI returns risk analysis
+* Backend stores result
+* Frontend displays result
+
+7. UI Requirements:
+
+* Show uploaded image
+* Show risk level with colors:
+
+  * Green → Safe
+  * Yellow → Suspicious
+  * Red → High Risk
+* Show explanation text
+
+8. Demo Mode:
+
+* Include a fake dataset or simulated results for testing
+* If real AI fails, fallback to dummy logic
+
+9. Folder Structure:
+   Create a clean modular structure:
+
+* frontend/
+* backend/
+* ai-engine/
+* database/
+* docs/
+
+10. Final Requirement:
+
+* Ensure project runs with simple commands:
+
+  * npm install
+  * npm start
+  * python app.py
+* Provide clear instructions in README.md
+
+11. Bonus:
+
+* Add loading spinner during scan
+* Add alert popup for high-risk detection
+
+Make the application fully functional, clean, and demo-ready for a hackathon.
+
+IMPORTANT:
+Keep the implementation simple but working. Focus on a smooth end-to-end flow:
+Upload → Analyze → Result → Alert
+
+At the end, give:
+
+* Full project code
+* Run instructions
+* Example test input

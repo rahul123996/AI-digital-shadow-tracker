@@ -1,0 +1,35 @@
+✅ Firebase initialised
+
+    🚀 AI Shadow Tracker backend ready at http://localhost:3001
+    🟢 Environment: development
+  
+ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+    at Object.xForwardedForHeader [90m(/home/runner/workspace/[39mbackend/node_modules/[4mexpress-rate-limit[24m/dist/index.cjs:381:13[90m)[39m
+    at wrappedValidations.<computed> [as xForwardedForHeader] [90m(/home/runner/workspace/[39mbackend/node_modules/[4mexpress-rate-limit[24m/dist/index.cjs:704:22[90m)[39m
+    at Object.keyGenerator [90m(/home/runner/workspace/[39mbackend/node_modules/[4mexpress-rate-limit[24m/dist/index.cjs:811:20[90m)[39m
+    at [90m/home/runner/workspace/[39mbackend/node_modules/[4mexpress-rate-limit[24m/dist/index.cjs:876:32
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async [90m/home/runner/workspace/[39mbackend/node_modules/[4mexpress-rate-limit[24m/dist/index.cjs:854:5 {
+  code: [32m'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR'[39m,
+  help: [32m'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'[39m
+}
+[0mGET /api/status [36m304[0m 2.557 ms - -[0m
+[0mGET /api/status [36m304[0m 0.377 ms - -[0m
+[firebaseService] scan fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/results?userId=user-kumarprajapati96696 [32m200[0m 668.954 ms - 36[0m
+[firebaseService] alert fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/alerts?userId=user-kumarprajapati96696 [36m304[0m 394.647 ms - -[0m
+[firebaseService] alert fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/alerts?userId=user-kumarprajapati96696 [36m304[0m 290.781 ms - -[0m
+[firebaseService] scan fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/results?userId=user-kumarprajapati96696 [36m304[0m 296.446 ms - -[0m
+[0mGET /api/status [36m304[0m 0.371 ms - -[0m
+[0mGET /api/status [36m304[0m 0.257 ms - -[0m
+[firebaseService] alert fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/alerts?userId=user-kumarprajapati96696 [36m304[0m 560.825 ms - -[0m
+[firebaseService] scan fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/results?userId=user-kumarprajapati96696 [36m304[0m 561.484 ms - -[0m
+[firebaseService] alert fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/alerts?userId=user-kumarprajapati96696 [36m304[0m 98.431 ms - -[0m
+[firebaseService] scan fetch fell back to memory: 5 NOT_FOUND: 
+[0mGET /api/results?userId=user-kumarprajapati96696 [36m304[0m 101.231 ms - -[0m

@@ -1,0 +1,5 @@
+[risk_analysis] ℹ️  GEMINI_API_KEY missing — using deterministic fallback
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 8000 is in use by another program. Either identify and stop that program, or start the server with a different port.
